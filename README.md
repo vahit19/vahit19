@@ -1,9 +1,10 @@
 # Vahit Feryad, PhD
 
-**AI verification.** I test whether the numbers that decide what AI ships (benchmark scores, LLM-judge verdicts, rater labels, reward signals) can be trusted, and build the checks that catch them when they can't.
+**AI verification.** I test whether the numbers that decide what AI ships (benchmark scores, LLM-judge verdicts, rater labels, RL reward signals) can be trusted, and build the checks that catch them when they can't.
 
 | Repo | Verifies | Result |
 |---|---|---|
+| [reward-audit](https://github.com/vahit19/reward-audit) | RL reward signals | GRPO with an LLM judge: reward 0.55 → 0.73 while true accuracy 0.22 → 0.30; 4 audited outputs per step flag it at step 1 |
 | [rater-audit](https://github.com/vahit19/rater-audit) | rating pipelines | on real ratings from 123 people, a 3-rater majority matched the expert label only 63% of the time |
 | [score-audit](https://github.com/vahit19/score-audit) | LLM-judge verdicts | false "incorrect" verdicts cut from 42 to 5 when the judge must quote the false sentence |
 | [judge-ceiling](https://github.com/vahit19/judge-ceiling) | judge leaderboards | 39 published scores reproduced exactly; one stated threshold moves the mean by 38% |
