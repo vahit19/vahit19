@@ -4,7 +4,8 @@
 
 | Repo | Verifies | Result |
 |---|---|---|
-| [reward-audit](https://github.com/vahit19/reward-audit) | RL reward signals | GRPO with an LLM judge: reward 0.55 → 0.73 while true accuracy 0.22 → 0.30; 4 audited outputs per step flag it at step 1 |
+| [rl-env-audit](https://github.com/vahit19/rl-env-audit) ([paper](https://github.com/vahit19/rl-env-audit/blob/main/paper/Two_Guesses_for_the_Price_of_One_Acceptance_Tests_for_RL_Environment_Graders.pdf)) | RL environment graders | 60 public environments scanned: 19 certified, 2 graders paid replies with no correct answer; both fixed to zero, honest answers unchanged |
+| [reward-audit](https://github.com/vahit19/reward-audit) ([paper](https://github.com/vahit19/reward-audit/tree/main/audited_rewards)) | RL reward signals | GRPO with an LLM judge: reward 0.55 → 0.73 while true accuracy 0.22 → 0.30; auditing 1 in 8 outputs gives a provably unbiased reward (0.22 vs. a true 0.23) |
 | [rater-audit](https://github.com/vahit19/rater-audit) | rating pipelines | on real ratings from 123 people, a 3-rater majority matched the expert label only 63% of the time |
 | [score-audit](https://github.com/vahit19/score-audit) | LLM-judge verdicts | false "incorrect" verdicts cut from 42 to 5 when the judge must quote the false sentence |
 | [judge-ceiling](https://github.com/vahit19/judge-ceiling) | judge leaderboards | 39 published scores reproduced exactly; one stated threshold moves the mean by 38% |
