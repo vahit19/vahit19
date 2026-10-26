@@ -4,6 +4,8 @@
 
 | Repo | Verifies | Result |
 |---|---|---|
+| [edge-diag-agent](https://github.com/vahit19/edge-diag-agent) | offline LLM answers on industrial drives | on 40 SINAMICS G120 fault codes, a 4-bit Qwen2.5-3B on 4 CPU cores matched the manual's meaning (0.94 word overlap) with the manuals and failed without them (0.06; it called 30 of 40 an encoder fault); a gate flags the 2 answers that stated the wrong acknowledgment |
+| [int8-flip-audit](https://github.com/vahit19/int8-flip-audit) | INT8 models on edge NPUs | on 5,000 images, 10.4–24.8% of a Qualcomm NPU's answers differed from the PC INT8 check that passed the model, while accuracy moved by less than 2 points |
 | [verdict-gate](https://github.com/vahit19/verdict-gate) ([paper](https://github.com/vahit19/verdict-gate/blob/main/studies/judge_self_preference/paper/self_preference.pdf)) | LLM-judge self-preference | on 8,794 real AI-shopping answers with names hidden, a Gemini judge picked Gemini 88–91% of the time vs. 38–40% for a third-family judge; showing the judge only the claims cut Gemini's bias from 50 to 24 points |
 | [rl-env-audit](https://github.com/vahit19/rl-env-audit) ([paper](https://github.com/vahit19/rl-env-audit/blob/main/paper/Two_Guesses_for_the_Price_of_One_Acceptance_Tests_for_RL_Environment_Graders.pdf)) | RL environment graders | 60 public environments scanned: 19 certified, 2 graders paid replies with no correct answer; both fixed to zero, honest answers unchanged |
 | [reward-audit](https://github.com/vahit19/reward-audit) ([paper](https://github.com/vahit19/reward-audit/tree/main/audited_rewards)) | RL reward signals | GRPO with an LLM judge: reward 0.55 → 0.73 while true accuracy 0.22 → 0.30; auditing 1 in 8 outputs gives a provably unbiased reward (0.22 vs. a true 0.23) |
